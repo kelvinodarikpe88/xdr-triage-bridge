@@ -2,6 +2,8 @@
 
 Turns a Microsoft Defender XDR incident into a Jira ticket — with containment proposed by a table, drafted by a model, and filed only by a named human.
 
+**Operating procedure:** [docs/SOP.md](docs/SOP.md) — how to run it, who approves, and what to do when it fails.
+
 ## The shape of the problem
 
 The tempting version of this tool closes incidents. That version is a fraud control a phishing email can talk out of the way: a compliant model plus a hostile alert equals a suppressed ticket, and nobody is told.
