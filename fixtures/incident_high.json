@@ -1,0 +1,43 @@
+{
+  "id": "inc-2931",
+  "displayName": "Credential access followed by lateral movement",
+  "severity": "high",
+  "status": "active",
+  "createdDateTime": "2026-11-19T08:12:00Z",
+  "incidentWebUrl": "https://security.microsoft.com/incidents/2931",
+  "alerts": [
+    {
+      "id": "a1",
+      "title": "Suspicious PowerShell launched by a service account",
+      "severity": "high",
+      "category": "Execution",
+      "detectionSource": "Defender XDR",
+      "tactics": ["Execution"],
+      "techniques": ["T1059.001"]
+    },
+    {
+      "id": "a2",
+      "title": "LSASS memory read by a non-standard process",
+      "severity": "high",
+      "category": "CredentialAccess",
+      "detectionSource": "Defender for Endpoint",
+      "tactics": ["Credential Access"],
+      "techniques": ["T1003.001"]
+    },
+    {
+      "id": "a3",
+      "title": "SMB session from fs-01 to ws-1042",
+      "severity": "medium",
+      "category": "LateralMovement",
+      "detectionSource": "Defender for Identity",
+      "tactics": ["Lateral Movement"],
+      "techniques": ["T1021.002"]
+    }
+  ],
+  "entities": {
+    "accounts": ["svc_backup", "j.doe"],
+    "hosts": ["fs-01", "ws-1042"],
+    "ips": ["203.0.113.44"],
+    "mailboxes": []
+  }
+}

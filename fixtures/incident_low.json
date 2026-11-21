@@ -1,0 +1,24 @@
+{
+  "id": "inc-2932",
+  "displayName": "Single low-severity malware detection, remediated",
+  "severity": "low",
+  "status": "active",
+  "createdDateTime": "2026-11-19T09:40:00Z",
+  "alerts": [
+    {
+      "id": "b1",
+      "title": "Potentially unwanted application detected and quarantined",
+      "severity": "low",
+      "category": "Malware",
+      "detectionSource": "Defender for Endpoint",
+      "tactics": [],
+      "techniques": []
+    }
+  ],
+  "entities": {
+    "accounts": [],
+    "hosts": [],
+    "ips": [],
+    "mailboxes": []
+  }
+}

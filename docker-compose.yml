@@ -1,0 +1,15 @@
+services:
+  xdr-triage-bridge:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      SECOPS_API_KEYS: ${SECOPS_API_KEYS:?set SECOPS_API_KEYS before starting}
+      RATE_LIMIT_PER_MIN: ${RATE_LIMIT_PER_MIN:-120}
+    read_only: true
+    tmpfs:
+      - /tmp
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
